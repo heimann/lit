@@ -30,3 +30,8 @@ def state():
     for l in lights:
         pprint.pprint(get_state(l))
 
+@click.argument('light', type=click.INT)
+@main.command()
+def flick(light):
+    state = b.get_light(light, 'on')
+    b.set_light(light, 'on', not state)
