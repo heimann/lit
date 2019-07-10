@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ced8306c3b4ad6477d0e1abf7f5c916c862cda67b456a4635f20a418ab0bd0b5"
+            "sha256": "79a47acb69dcfa61047c84decbc6da7a6ffd8c0b1fcd1f64b512002acdeacb90"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -91,12 +91,23 @@
             ],
             "version": "==2.8"
         },
+        "lit": {
+            "editable": true,
+            "path": "."
+        },
         "phue": {
             "hashes": [
                 "sha256:61facc991a2ead1d727df8513d06ce089033489b6dca09be093db24f7cdb8874"
             ],
             "index": "pypi",
             "version": "==1.1"
+        },
+        "pprint": {
+            "hashes": [
+                "sha256:c0fa22d1462351671ca098e9779bb26a23880011e93eea5f199a150ee7b92a16"
+            ],
+            "index": "pypi",
+            "version": "==0.1"
         },
         "pygments": {
             "hashes": [
@@ -225,8 +236,7 @@
         },
         "wrapt": {
             "hashes": [
-                "sha256:565a021fd19419476b9362b05eeaa094178de64f8361e44468f9e9d7843901e1",
-                "sha256:c018f45a51947c66312b182f905dbbdeea5344c284cb3a0a7405c012a6c4fbc3"
+                "sha256:565a021fd19419476b9362b05eeaa094178de64f8361e44468f9e9d7843901e1"
             ],
             "version": "==1.11.2"
         }

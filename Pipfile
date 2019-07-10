@@ -10,6 +10,8 @@ pylint = "*"
 click = "*"
 phue = "*"
 bpython = "*"
+lit = {editable = true,path = "."}
+pprint = "*"
 
 [requires]
 python_version = "3.7"

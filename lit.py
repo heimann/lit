@@ -1,4 +1,5 @@
 import os
+import pprint
 import click
 from phue import Bridge
 
@@ -7,13 +8,25 @@ hue_ip = os.getenv("HUE_IP")
 
 b = Bridge(hue_ip, hue_username)
 
-@click.command()
-def work():
-    b.set_light(3, 'bri', 250)
-    b.set_light(3, 'on', True)
+def get_state(light):
+    return {
+        "name": light.name,
+        "on": light.on,
+        "brightness": light.brightness,
+        "xy": light.xy,
+        "hue": light.hue,
+        "saturation": light.saturation
+    }
 
 
-if __name__ == '__main__':
-    work()
+@click.group()
+@click.pass_context
+def main(ctx):
+    click.echo("Hello")
 
+@main.command()
+def state():
+    lights = b.lights
+    for l in lights:
+        pprint.pprint(get_state(l))
 
