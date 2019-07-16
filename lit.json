@@ -1,0 +1,29 @@
+{
+  "calm": [
+    {
+      "id": 1,
+      "brightness": 104,
+      "hue": 7676,
+      "on": true,
+      "saturation": 199,
+      "xy": [0.5016,0.4151]
+    },
+    {
+      "id": 2,
+      "brightness": 104,
+      "hue": 7676,
+      "on": true,
+      "saturation": 199,
+      "xy": [0.5016, 0.4151]
+    },
+    {
+      "id": 3,
+      "brightness": 65,
+      "hue": 8402,
+      "on": true,
+      "saturation": 140,
+      "xy": [0.4575, 0.4099]
+    }
+  ]
+}
+    

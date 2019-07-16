@@ -8,8 +8,9 @@ hue_ip = os.getenv("HUE_IP")
 
 b = Bridge(hue_ip, hue_username)
 
-def get_state(light):
+def get_light_state(light):
     return {
+        "id": light.light_id,
         "name": light.name,
         "on": light.on,
         "brightness": light.brightness,
@@ -27,8 +28,11 @@ def main(ctx):
 @main.command()
 def state():
     lights = b.lights
-    for l in lights:
-        pprint.pprint(get_state(l))
+    scene = {
+        'name': [get_light_state(l) for l in lights]
+    }
+    pprint.pprint(scene)
+
 
 @click.argument('light', type=click.INT)
 @main.command()
